@@ -1,0 +1,33 @@
+[package]
+name = "nmsao"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[dependencies]
+eframe = "0.34.2"
+egui = "0.34.2"
+egui_dock = "0.19.1"
+image = "0.25.10"
+egui_file = "0.26.0"
+walkdir = "2.5.0"
+serde = {version = "1.0.228", features = ["derive"]}
+serde_json = "1.0.149"
+anyhow = "1.0.102"
+rfd = "0.17.2"
+webbrowser = "1.2.1"
+byteorder = "1.5.0"
+audio_samples = { version = "2.0.1", features = ["transforms", "psychoacoustic"] }
+hound = "3.5.1"
+non-empty-slice = "0.6.0"
+spectrograms = "2.1.3"
+rand = "0.10.2"
+ww2ogg = "0.1.0"
+rodio = { version = "0.22.2", features = ["symphonia-all"] }
+
+[target.'cfg(windows)'.build-dependencies]
+tauri-winres = "0.3.6"
+
+[package.metadata.tauri-winres]
+FileDescription = "No Mans Sky Audio Organizer"
+OriginalFilename = "nmsao.exe"
