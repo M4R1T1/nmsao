@@ -67,15 +67,6 @@ pub(crate) fn convert_wem_to_ogg(input_path: &Path, output_path: &Path) -> Resul
             data
         }
     };
-    // let result = try_with_codebooks(&input_data, false);
-    // let ogg_data = match result {
-    //     Ok(data) if validate(&data).is_ok() => data,
-    //     _ => {
-    //         let data = try_with_codebooks(&input_data, true)?;
-    //         validate(&data).map_err(|e| format!("validation failed: {}", e))?;
-    //         data
-    //     }
-    // };
     if let Some(parent) = output_path.parent() {
         std::fs::create_dir_all(parent)?;
     }
